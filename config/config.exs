@@ -28,3 +28,7 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+
+config :githubapi, GitHub,
+  client_id: System.get_env("GITHUB_ID"),
+  client_secret: System.get_env("GITHUB_SECRET")
