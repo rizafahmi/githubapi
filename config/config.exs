@@ -31,4 +31,5 @@ use Mix.Config
 
 config :githubapi, GitHub,
   client_id: System.get_env("GITHUB_ID"),
-  client_secret: System.get_env("GITHUB_SECRET")
+  client_secret: System.get_env("GITHUB_SECRET"),
+  token: System.get_env("GITHUB_TOKEN")
