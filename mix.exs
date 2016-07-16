@@ -14,7 +14,7 @@ defmodule GitHub.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :httpoison]]
+    [applications: [:logger, :httpoison, :quantum]]
   end
 
   # Dependencies can be Hex packages:
@@ -30,6 +30,7 @@ defmodule GitHub.Mixfile do
     [
      {:httpoison, "~> 0.9.0"},
      {:poison, "~> 2.2"},
+     {:quantum, ">= 1.7.1"}
     ]
   end
 end

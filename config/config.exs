@@ -33,3 +33,7 @@ config :githubapi, GitHub,
   client_id: System.get_env("GITHUB_ID"),
   client_secret: System.get_env("GITHUB_SECRET"),
   token: System.get_env("GITHUB_TOKEN")
+
+config :quantum, cron: [
+  "* * * * *": {GitHub, :cron}
+]

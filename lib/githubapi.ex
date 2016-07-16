@@ -21,6 +21,11 @@ defmodule GitHub do
     IO.inspect Poison.decode(response.body)
   end
 
+  def cron do
+    Logger.info "Cron is running..."
+  end
+
+
   defp get_credentials do
     credentials = Application.get_env(:githubapi, GitHub)
     {:client_id, client_id} = Enum.at(credentials, 0)
@@ -33,5 +38,6 @@ defmodule GitHub do
     token = Application.get_env(:githubapi, GitHub)[:token]
     headers = [{"Authorization", "token #{token}"}]
   end
+
 
 end
